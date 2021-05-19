@@ -14,6 +14,14 @@ router.get('/', (req, res) => {
 });
 
 router.get('/quizpage', (req, res) => {
+
+  console.log("\n\n\n");
+  console.log(req);
+console.log("\n\n\n");
+console.log(res);
+console.log("\n\n\n");
+
+
   res.render('quiz', {
     session: req.session
   });
@@ -28,7 +36,7 @@ router.get('/box-office-page', (req, res) => {
 router.get('/loginpage', (req, res) => {
   if (req.session.loggedIn) {
     console.log("\n\n LOGIN PAGE: USER LOGGED IN! \n\n");
-    res.redirect('/quizpage');
+    res.redirect('/box-office-page');
     return;
   } else {
     console.log("\n\n LOGIN PAGE: USER NOT LOGGED IN \n\n");

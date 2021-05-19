@@ -11,14 +11,114 @@ const answerButtonsElement4 = document.getElementById('answer4')
 let currentQuestionIndex = 0
 let shuffledQuestions;
 
-
 // startButton.addEventListener('click', startQuiz);
 // nextButton.addEventListener('click', () => {
 //     nextQuestion()
 // })
 
 // Start quiz for specific genre user picks 
-let questions;
+let questions = [
+    {
+        cat_number: 1,
+        category: 'Horror',
+        question: 'How many times does Count Orlock blink throughout the entirety of his appearance in Nosferatu?',
+        correct_answer: 'Once',
+        answer1: 'Once',
+        answer2: 'Twice',
+        answer3: 'Three Times',
+        answer4: 'Four Times'
+    },
+    {
+        cat_number: 2,
+        category: 'Horror',
+        question: 'Which horror film was the first-ever of its genre to be nominated for a Best Picture Oscar?',
+        correct_answer: 'The Exorcist',
+        answer1: 'Jaws',
+        answer2: 'Halloween',
+        answer3: 'The Exorcist',
+        answer4: 'Rosemarys Baby'
+    },
+    {
+        cat_number: 3,
+        category: 'Horror',
+        question: 'How many years did it take to get Aliens made?',
+        correct_answer: 'Seven',
+        answer1: 'Four',
+        answer2: 'Five',
+        answer3: 'Seven',
+        answer4: 'Eight'
+    },
+    {
+        cat_number: 4,
+        category: 'Horror',
+        question: 'What is the most profitable film series of all time?',
+        correct_answer: 'Paranormal Activity',
+        answer1: 'Paranormal Activity',
+        answer2: 'Scream',
+        answer3: 'Nightmare on Elm Street',
+        answer4: 'The Purge'
+    },
+    {
+        cat_number: 5,
+        category: 'Horror',
+        question: 'Which popular horror film was inspired by real events that took place in Gainesville, Florida in the early 90s?',
+        correct_answer: 'Scream',
+        answer1: 'I Know What You Did Last Summer',
+        answer2: 'The Haunting',
+        answer3: 'Scream',
+        answer4: 'The Faculty'
+    },
+    {
+        cat_number: 6,
+        category: 'Horror',
+        question: 'How long did it take to film The Blair Witch Project?',
+        correct_answer: '8 Days',
+        answer1: '3 Days',
+        answer2: '8 Days',
+        answer3: '4 Weeks',
+        answer4: '6 Months'
+    },
+    {
+        cat_number: 7,
+        category: 'Horror',
+        question: 'What is the name of the demon that possesses Regan MacNeil in The Exorcist?',
+        correct_answer: 'Pazuzu',
+        answer1: 'Abaddon',
+        answer2: 'Amon',
+        answer3: 'Drexel',
+        answer4: 'Pazuzu'
+    },
+    {
+        cat_number: 8,
+        category: 'Horror',
+        question: 'What was almost the title of the Friday the 13th movies?',
+        correct_answer: 'Long Night at Camp Blood',
+        answer1: 'Long Night at Camp Blood',
+        answer2: 'Nighttime at Camp Fear',
+        answer3: 'Jason',
+        answer4: 'Teenage Blood'
+    },
+    {
+        cat_number: 9,
+        category: 'Horror',
+        question: 'What color is Freddy Kreuger’s sweater?',
+        correct_answer: 'Red and Green',
+        answer1: 'Red and Purple',
+        answer2: 'Red and Yellow',
+        answer3: 'Red and White',
+        answer4: 'Red and Green'
+    },
+    {
+        cat_number: 10,
+        category: 'Horror',
+        question: 'How long did it take to film The Blair Witch Project?',
+        correct_answer: '8 Days',
+        answer1: '3 Days',
+        answer2: '8 Days',
+        answer3: '4 Weeks',
+        answer4: '6 Months'
+    }
+];
 let time = 15;
 let current = 0;
 let timer;
@@ -48,13 +148,22 @@ const startQuiz = () => {
 }
 
 const getQuestions = () => {
-    fetch("/api/quiz").then(res => res.json()).then(data => {
-        console.log(data);
-        questions = data;
+
+    // var url = window.location.href;
+    // var category = url.searchParams.get("category");
+    // console.log(category);
+    
+    
+    
+
+
+    // fetch("./quiz").then(res => res.json()).then(data => {
+    //     console.log(data);
+    //     questions = data;
         startQuiz();
-    }).catch(err => {
-        console.log(err)
-    }) 
+    // }).catch(err => {
+    //     console.log(err);
+    // }) 
 
 }
 
