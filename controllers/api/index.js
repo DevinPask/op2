@@ -6,7 +6,7 @@ const questionRoutes = require('./question-routes');
 const quizRoutes = require('./quiz-routes');
 
 router.use('/users', userRoutes);
-router.use('/scores', scoreRoutes);
+router.use('/score', scoreRoutes);
 router.use('/questions', questionRoutes);
-router.use('/quiz', quizRoutes)
+router.use('/quiz', questionRoutes)
 module.exports = router;

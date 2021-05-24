@@ -161,6 +161,7 @@ body{
 #question-container {
     font-family: "Gruppo";
     font-size: 20px;
+    max-width: 450px;
     font-weight: bold;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -176,7 +177,16 @@ body{
     width: inherit;
     padding-bottom: 5%;
    }
-
+.ticket-btn {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, auto);
+    gap: 5px;
+    width: 80px;
+    height: 75px;
+    padding-bottom: 2%;
+   }
 .btn {
     font-family: "Gruppo";
     font-weight: bold;

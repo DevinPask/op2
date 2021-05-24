@@ -23,7 +23,8 @@ console.log("\n\n\n");
 
 
   res.render('quiz', {
-    session: req.session
+    session: req.session,
+    username: req.session.username
   });
 });
 

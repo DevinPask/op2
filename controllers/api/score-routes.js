@@ -46,10 +46,11 @@ router.get('/', (req, res) => {
       });
   });
 
-  router.post('/', (req, res) => {
+  router.post('/final-score', (req, res) => {
     // expects {score: 1200 user_id: 1}
     Score.create({
       Score: req.body.Score,
+      uname: req.body.username,
       id: req.body.id
     })
       .then(dbScoreData => res.json(dbScoreData))

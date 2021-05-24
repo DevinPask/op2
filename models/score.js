@@ -16,7 +16,11 @@ Score.init(
         allowNull: false,
         defaultValue: 1200
       },
-  
+      uname: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: "-"
+      },
     },
     {
       sequelize,

@@ -1,7 +1,8 @@
 <section id="quiz-content" class="section">
   <button id="logout" class="btn-no-style">logout</button>
   <div id="main" class="container">
-    <h1 class="quiz-header">PLAYING THE HORROR QUIZ</h1>
+    <h1 class="quiz-header"><span id='username'>{{username}}</span> IS PLAYING THE {{category}} QUIZ</h1>
+    <h2 class="quiz-header">Current Score: <span id='current-score'>0</span></h2>
     <div class="columns">
       <div id="question-container" class="column">
         {{questions}}*QUESTION APPEARS HERE*
